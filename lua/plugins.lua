@@ -11,6 +11,13 @@ return require("packer").startup {
   function(use)
     -- Packer can manage itself
     use "wbthomason/packer.nvim"
+
+    use({
+        "iamcco/markdown-preview.nvim",
+        run = function() vim.fn["mkdp#util#install"]() end,
+    })
+
+
     use {
       'rmagatti/session-lens',
       requires = {'rmagatti/auto-session', 'nvim-telescope/telescope.nvim'},

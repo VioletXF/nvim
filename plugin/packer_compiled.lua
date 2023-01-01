@@ -158,6 +158,11 @@ _G.packer_plugins = {
     path = "/Users/xf/.local/share/nvim/site/pack/packer/start/lush.nvim",
     url = "https://github.com/rktjmp/lush.nvim"
   },
+  ["markdown-preview.nvim"] = {
+    loaded = true,
+    path = "/Users/xf/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim",
+    url = "https://github.com/iamcco/markdown-preview.nvim"
+  },
   neogit = {
     config = { " require('plugins/neogit') " },
     loaded = true,
@@ -292,22 +297,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: formatter.nvim
-time([[Config for formatter.nvim]], true)
- require('plugins/formatter') 
-time([[Config for formatter.nvim]], false)
--- Config for: nvim-autopairs
-time([[Config for nvim-autopairs]], true)
- require('plugins/autopairs') 
-time([[Config for nvim-autopairs]], false)
 -- Config for: nvim-lsp-installer
 time([[Config for nvim-lsp-installer]], true)
  require('plugins/lsp_installer_nvim') 
 time([[Config for nvim-lsp-installer]], false)
--- Config for: which-key.nvim
-time([[Config for which-key.nvim]], true)
-try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14which-key\frequire\0", "config", "which-key.nvim")
-time([[Config for which-key.nvim]], false)
 -- Config for: nvim-lspconfig
 time([[Config for nvim-lspconfig]], true)
  require('plugins/lspconfig') 
@@ -324,14 +317,18 @@ time([[Config for git-worktree.nvim]], false)
 time([[Config for nvim-treesitter]], true)
  require('plugins/treesitter') 
 time([[Config for nvim-treesitter]], false)
--- Config for: indent-blankline.nvim
-time([[Config for indent-blankline.nvim]], true)
- require('plugins/blankline') 
-time([[Config for indent-blankline.nvim]], false)
+-- Config for: telescope.nvim
+time([[Config for telescope.nvim]], true)
+ require('plugins/telescope') 
+time([[Config for telescope.nvim]], false)
 -- Config for: LuaSnip
 time([[Config for LuaSnip]], true)
  require('plugins/luasnip') 
 time([[Config for LuaSnip]], false)
+-- Config for: toggleterm.nvim
+time([[Config for toggleterm.nvim]], true)
+ require('plugins/toggleterm') 
+time([[Config for toggleterm.nvim]], false)
 -- Config for: auto-session
 time([[Config for auto-session]], true)
  require('plugins/auto-session') 
@@ -340,34 +337,42 @@ time([[Config for auto-session]], false)
 time([[Config for lspkind-nvim]], true)
  require('plugins/lspkind') 
 time([[Config for lspkind-nvim]], false)
--- Config for: telescope.nvim
-time([[Config for telescope.nvim]], true)
- require('plugins/telescope') 
-time([[Config for telescope.nvim]], false)
--- Config for: lualine.nvim
-time([[Config for lualine.nvim]], true)
- require('plugins/lualine') 
-time([[Config for lualine.nvim]], false)
--- Config for: toggleterm.nvim
-time([[Config for toggleterm.nvim]], true)
- require('plugins/toggleterm') 
-time([[Config for toggleterm.nvim]], false)
--- Config for: session-lens
-time([[Config for session-lens]], true)
-try_loadstring("\27LJ\2\no\0\0\3\0\5\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\0016\0\0\0'\2\3\0B\0\2\0029\0\4\0'\2\1\0B\0\2\1K\0\1\0\19load_extension\14telescope\nsetup\17session-lens\frequire\0", "config", "session-lens")
-time([[Config for session-lens]], false)
--- Config for: zen-mode.nvim
-time([[Config for zen-mode.nvim]], true)
- require('plugins/zen-mode') 
-time([[Config for zen-mode.nvim]], false)
--- Config for: neogit
-time([[Config for neogit]], true)
- require('plugins/neogit') 
-time([[Config for neogit]], false)
 -- Config for: barbar.nvim
 time([[Config for barbar.nvim]], true)
  require('plugins/barbar') 
 time([[Config for barbar.nvim]], false)
+-- Config for: lualine.nvim
+time([[Config for lualine.nvim]], true)
+ require('plugins/lualine') 
+time([[Config for lualine.nvim]], false)
+-- Config for: session-lens
+time([[Config for session-lens]], true)
+try_loadstring("\27LJ\2\no\0\0\3\0\5\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\0016\0\0\0'\2\3\0B\0\2\0029\0\4\0'\2\1\0B\0\2\1K\0\1\0\19load_extension\14telescope\nsetup\17session-lens\frequire\0", "config", "session-lens")
+time([[Config for session-lens]], false)
+-- Config for: indent-blankline.nvim
+time([[Config for indent-blankline.nvim]], true)
+ require('plugins/blankline') 
+time([[Config for indent-blankline.nvim]], false)
+-- Config for: neogit
+time([[Config for neogit]], true)
+ require('plugins/neogit') 
+time([[Config for neogit]], false)
+-- Config for: which-key.nvim
+time([[Config for which-key.nvim]], true)
+try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14which-key\frequire\0", "config", "which-key.nvim")
+time([[Config for which-key.nvim]], false)
+-- Config for: formatter.nvim
+time([[Config for formatter.nvim]], true)
+ require('plugins/formatter') 
+time([[Config for formatter.nvim]], false)
+-- Config for: nvim-autopairs
+time([[Config for nvim-autopairs]], true)
+ require('plugins/autopairs') 
+time([[Config for nvim-autopairs]], false)
+-- Config for: zen-mode.nvim
+time([[Config for zen-mode.nvim]], true)
+ require('plugins/zen-mode') 
+time([[Config for zen-mode.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
