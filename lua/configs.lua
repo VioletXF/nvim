@@ -7,10 +7,11 @@ local cmd = vim.cmd -- execute Vim commands
 -- local w     = vim.wo            -- windows-scoped options
 
 cmd('autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=grey') -- to Show whitespace, MUST be inserted BEFORE the colorscheme command
-vim.g.nord_disable_background = true
-vim.g.nord_contrast = true
-vim.g.nord_borders = true
-require('nord').set()
+--vim.g.nord_disable_background = true
+--vim.g.nord_contrast = true
+--vim.g.nord_borders = true
+--require('nord').set()
+vim.cmd[[colorscheme darcula-solid]]
 set.guifont = 'DroidSansMono Nerd Font 11'
 set.termguicolors = true -- Enable GUI colors for the terminal to get truecolor
 set.list = false -- show whitespace
@@ -60,7 +61,7 @@ set.laststatus = 2 -- always show status line
 
 set.hidden = true -- allows you to hide buffers with unsaved changes without being prompted
 set.inccommand = 'split' -- live preview of :s results
-set.shell = 'zsh' -- shell to use for `!`, `:!`, `system()` etc.
+set.shell = 'fish' -- shell to use for `!`, `:!`, `system()` etc.
 -- highlight on yank
 exec([[
   augroup YankHighlight

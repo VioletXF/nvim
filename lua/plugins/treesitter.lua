@@ -1,10 +1,14 @@
 require "nvim-treesitter.configs".setup {
   indent = {
-    enable = true
+    enable = true,
+    disable = {"rust"},
   },
   ignore_install = { "phpdoc", "tree-sitter-phpdoc" }, -- List of parsers to ignore installing
   ensure_installed = "all",
   auto_install = true,
+  --autopairs = {
+  --  enable = true,
+  --},
   highlight = {
     enable = true, -- enable = true (false will disable the whole extension)
     -- disable = { "c", "rust" },  -- list of language that will be disabled

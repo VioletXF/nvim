@@ -2,6 +2,8 @@ local map = require("utils").map
 
 vim.g.mapleader = " "
 
+--vim.api.nvim_set_keymap("t","<Esc>", "<C-\\><C-n>", {noremap=true})
+
 -- wrap
 map("n", "<Leader>w", ":set wrap! linebreak!<cr>")
 map("n", "j", "gj")

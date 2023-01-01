@@ -11,7 +11,17 @@ return require("packer").startup {
   function(use)
     -- Packer can manage itself
     use "wbthomason/packer.nvim"
-
+    use { "neoclide/coc.nvim", branch = "release" }
+    use { "rust-lang/rust.vim" }
+    -- Auto pairs
+    use {
+	    "windwp/nvim-autopairs",
+      config = [[ require('plugins/autopairs') ]]
+    }
+    -- toggleterm
+    use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+      require("toggleterm").setup()
+    end}
     use {
       -- A collection of common configurations for Neovim's built-in language server client
       "neovim/nvim-lspconfig",
@@ -41,19 +51,19 @@ return require("packer").startup {
     }
     ]=]
 
-    use {
+    --use {
       -- A completion plugin for neovim coded in Lua.
-      "hrsh7th/nvim-cmp",
-      requires = {
-        "hrsh7th/cmp-nvim-lsp", -- nvim-cmp source for neovim builtin LSP client
-        "hrsh7th/cmp-nvim-lua", -- nvim-cmp source for nvim lua
-        "hrsh7th/cmp-buffer", -- nvim-cmp source for buffer words.
-        "hrsh7th/cmp-path", -- nvim-cmp source for filesystem paths.
-        "hrsh7th/cmp-calc", -- nvim-cmp source for math calculation.
-        "saadparwaiz1/cmp_luasnip" -- luasnip completion source for nvim-cmp
-      },
-      config = [[ require('plugins/cmp') ]]
-    }
+    --  "hrsh7th/nvim-cmp",
+    --  requires = {
+    --    "hrsh7th/cmp-nvim-lsp", -- nvim-cmp source for neovim builtin LSP client
+    --    "hrsh7th/cmp-nvim-lua", -- nvim-cmp source for nvim lua
+    --    "hrsh7th/cmp-buffer", -- nvim-cmp source for buffer words.
+    --    "hrsh7th/cmp-path", -- nvim-cmp source for filesystem paths.
+    --    "hrsh7th/cmp-calc", -- nvim-cmp source for math calculation.
+    --    "saadparwaiz1/cmp_luasnip" -- luasnip completion source for nvim-cmp
+    --  },
+    --  config = [[ require('plugins/cmp') ]]
+    --}
 
     use {
       "nvim-telescope/telescope-project.nvim"
@@ -73,15 +83,15 @@ return require("packer").startup {
       config = [[ require('plugins/telescope') ]]
     }
 
-    use {
-      "nvim-telescope/telescope-bibtex.nvim",
-      requires = {
-        {"nvim-telescope/telescope.nvim"}
-      },
-      config = function()
-        require "telescope".load_extension("bibtex")
-      end
-    }
+--    use {
+--      "nvim-telescope/telescope-bibtex.nvim",
+--      requires = {
+--        {"nvim-telescope/telescope.nvim"}
+--      },
+--      config = function()
+--        require "telescope".load_extension("bibtex")
+--      end
+--    }
 
     use {
       -- Snippet Engine for Neovim written in Lua.
@@ -92,10 +102,7 @@ return require("packer").startup {
       config = [[ require('plugins/luasnip') ]]
     }
 
-    use {
-      --  colorscheme for (neo)vim
-      "shaunsingh/nord.nvim"
-    }
+    use { "briones-gabriel/darcula-solid.nvim", requires = "rktjmp/lush.nvim" }
 
     use {
       -- Nvim Treesitter configurations and abstraction layer
