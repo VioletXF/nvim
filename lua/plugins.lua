@@ -11,6 +11,34 @@ return require("packer").startup {
   function(use)
     -- Packer can manage itself
     use "wbthomason/packer.nvim"
+    use {
+      'rmagatti/session-lens',
+      requires = {'rmagatti/auto-session', 'nvim-telescope/telescope.nvim'},
+      config = function()
+        require('session-lens').setup({--[[your custom config--]]})
+        require("telescope").load_extension("session-lens")
+      end
+    }
+    use {
+      'rmagatti/auto-session',
+      config = [[ require('plugins/auto-session') ]]
+    }
+    use {
+      "folke/which-key.nvim",
+      config = function()
+        require("which-key").setup {
+          -- your configuration comes here
+          -- or leave it empty to use the default settings
+          -- refer to the configuration section below
+        }
+      end
+    }
+    use 'nvim-tree/nvim-web-devicons'
+    use {'romgrk/barbar.nvim', wants = 'nvim-web-devicons'}
+    use {
+      "prettier/vim-prettier",
+      run = "yarn install"
+    }
     use { "neoclide/coc.nvim", branch = "release" }
     use { "rust-lang/rust.vim" }
     -- Auto pairs
@@ -82,7 +110,12 @@ return require("packer").startup {
       },
       config = [[ require('plugins/telescope') ]]
     }
-
+    use {
+      "junegunn/fzf"
+    }
+    use {
+      "junegunn/fzf.vim"
+    }
 --    use {
 --      "nvim-telescope/telescope-bibtex.nvim",
 --      requires = {

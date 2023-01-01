@@ -111,3 +111,5 @@ cmd(
 vim.g.tex_flavor = "latex";
 cmd(
     [[ autocmd FileType latex,tex,plaintex set wrap linebreak ]])
+
+vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
