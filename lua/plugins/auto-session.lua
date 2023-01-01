@@ -10,11 +10,12 @@ local opts = {
   auto_session_enabled = true,
   auto_save_enabled = true,
   auto_restore_enabled = true,
-  auto_session_suppress_dirs = { "~/", "~/Projects", "~/Downloads", "/"},
+  auto_session_suppress_dirs = nil,
   auto_session_use_git_branch = nil,
   -- the configs below are lua only
   bypass_session_save_file_types = nil,
   pre_save_cmds = {"tabdo NvimTreeClose"},
+  post_save_cmds = {"tabdo NvimTreeOpen"},
   post_restore_cmds = {restore_nvim_tree, "tabdo NvimTreeRefresh", "tabdo NvimTreeOpen"}
 }
 

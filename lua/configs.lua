@@ -6,6 +6,7 @@ local cmd = vim.cmd -- execute Vim commands
 -- local b     = vim.bo            -- buffer-scoped options
 -- local w     = vim.wo            -- windows-scoped options
 
+vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 cmd('autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=grey') -- to Show whitespace, MUST be inserted BEFORE the colorscheme command
 --vim.g.nord_disable_background = true
 --vim.g.nord_contrast = true
@@ -111,5 +112,3 @@ cmd(
 vim.g.tex_flavor = "latex";
 cmd(
     [[ autocmd FileType latex,tex,plaintex set wrap linebreak ]])
-
-vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"

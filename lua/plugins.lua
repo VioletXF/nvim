@@ -34,7 +34,7 @@ return require("packer").startup {
       end
     }
     use 'nvim-tree/nvim-web-devicons'
-    use {'romgrk/barbar.nvim', wants = 'nvim-web-devicons'}
+    use {'romgrk/barbar.nvim', wants = 'nvim-web-devicons', config = [[ require('plugins/barbar') ]]}
     use {
       "prettier/vim-prettier",
       run = "yarn install"
@@ -47,9 +47,7 @@ return require("packer").startup {
       config = [[ require('plugins/autopairs') ]]
     }
     -- toggleterm
-    use {"akinsho/toggleterm.nvim", tag = '*', config = function()
-      require("toggleterm").setup()
-    end}
+    use {"akinsho/toggleterm.nvim", tag = '*', config = [[ require('plugins/toggleterm') ]]}
     use {
       -- A collection of common configurations for Neovim's built-in language server client
       "neovim/nvim-lspconfig",
