@@ -12,9 +12,15 @@ return require("packer").startup {
     -- Packer can manage itself
     use "wbthomason/packer.nvim"
     use "github/copilot.vim"
+
+    use{
+      "yardnsm/vim-import-cost",
+      run = "npm install --production"
+    }
     use({
         "iamcco/markdown-preview.nvim",
         run = function() vim.fn["mkdp#util#install"]() end,
+        config = [[ require('plugins.markdown-preview') ]],
     })
 
 

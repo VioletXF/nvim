@@ -3,6 +3,12 @@ local opts = { noremap = true, silent = true }
 vim.g.mapleader = " "
 
 --vim.api.nvim_set_keymap("t","<Esc>", "<C-\\><C-n>", {noremap=true})
+-- coc
+map("n", "gd", "<Plug>(coc-definition)", {silent = true})
+map("n", "gy", "<Plug>(coc-type-definition)", {silent = true})
+map("n", "gi", "<Plug>(coc-implementation)", {silent = true})
+map("n", "gr", "<Plug>(coc-references)", {silent = true})
+map("n", "rr", "<Plug>(coc-rename)", {silent = true})
 -- barbar
 -- Move to previous/next
 map('n', '<A-,>', '<Cmd>BufferPrevious<CR>', opts)
