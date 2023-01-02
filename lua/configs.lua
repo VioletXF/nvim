@@ -12,7 +12,7 @@ cmd('autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=grey') --
 --vim.g.nord_contrast = true
 --vim.g.nord_borders = true
 --require('nord').set()
-vim.cmd[[colorscheme darcula-solid]]
+vim.cmd[[colorscheme nightfox]]
 set.guifont = 'DroidSansMono Nerd Font 11'
 set.termguicolors = true -- Enable GUI colors for the terminal to get truecolor
 set.list = false -- show whitespace
@@ -30,6 +30,7 @@ set.fillchars = {
     fold = '·', -- MIDDLE DOT (U+00B7, UTF-8: C2 B7)
     vert = ' ' -- remove ugly vertical lines on window division
 }
+set.autoread = true
 set.undofile = true
 set.undodir = vim.fn.stdpath("config") .. "/undo"
 set.clipboard = set.clipboard + "unnamedplus" -- copy & paste

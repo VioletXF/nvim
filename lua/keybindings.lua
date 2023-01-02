@@ -9,6 +9,14 @@ map("n", "gy", "<Plug>(coc-type-definition)", {silent = true})
 map("n", "gi", "<Plug>(coc-implementation)", {silent = true})
 map("n", "gr", "<Plug>(coc-references)", {silent = true})
 map("n", "rr", "<Plug>(coc-rename)", {silent = true})
+map("n", "<leader>re", "<Plug>(coc-codeaction-refactor)", {silent = true})
+map("x", "<leader>r", "<Plug>(coc-codeaction-refactor-selected)", {silent = true})
+map("n", "<leader>a", "<Plug>(coc-codeaction-selected)", {silent = true})
+--map("i", "<TAB>", 'coc#pum#visible() ? coc#pum#next(1) : v:lua.check_back_space() ? "<TAB>" : coc#refresh()', {silent = true, noremap = true, expr = true, replace_keycodes = false})
+--map("i", "<S-TAB>", [[coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"]], {silent = true, noremap = true, expr = true, replace_keycodes = false})
+
+map("i", "<cr>", [[coc#pum#visible() && coc#pum#info()['index'] != -1 ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"]], {silent = true, noremap = true, expr = true})
+
 -- barbar
 -- Move to previous/next
 map('n', '<A-,>', '<Cmd>BufferPrevious<CR>', opts)

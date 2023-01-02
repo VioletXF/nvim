@@ -11,6 +11,7 @@ return require("packer").startup {
   function(use)
     -- Packer can manage itself
     use "wbthomason/packer.nvim"
+    use "EdenEast/nightfox.nvim" -- nightfox theme
     use "github/copilot.vim"
 
     use{
@@ -54,11 +55,7 @@ return require("packer").startup {
     }
     use { "neoclide/coc.nvim", branch = "release" }
     use { "rust-lang/rust.vim" }
-    -- Auto pairs
-    use {
-	    "windwp/nvim-autopairs",
-      config = [[ require('plugins/autopairs') ]]
-    }
+
     -- toggleterm
     use {"akinsho/toggleterm.nvim", tag = '*', config = [[ require('plugins/toggleterm') ]]}
     use {
